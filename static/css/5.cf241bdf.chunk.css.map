@@ -1,0 +1,1 @@
+{"version":3,"sources":["FilterContacts.module.css"],"names":[],"mappings":"AAAA,mCACE,cAAe,CACf,0BAA2B,CAC3B,aAAc,CACd,WAAY,CAEZ,WAAgC,CAAhC,+BACF","file":"5.cf241bdf.chunk.css","sourcesContent":[".filterInput {\r\n  font-size: 18px;\r\n  padding: 10px 10px 10px 5px;\r\n  display: block;\r\n  width: 360px;\r\n  border: none;\r\n  border-bottom: 1px solid #757575;\r\n}\r\n"]}
