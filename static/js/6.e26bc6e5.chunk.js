@@ -1,0 +1,2 @@
+(this["webpackJsonphw7-async-redux-phonebook"]=this["webpackJsonphw7-async-redux-phonebook"]||[]).push([[6],{135:function(e,n,t){"use strict";t.r(n);var r=t(27),a=t(28),c=t(0),u=t.n(c),l=function(e){var n=e.error;return u.a.createElement("div",null,u.a.createElement("p",null,n.message),u.a.createElement("p",null,n.name),u.a.createElement("p",null,n.stack))};n.default=Object(r.b)((function(e){return{error:Object(a.c)(e)}}))(l)}}]);
+//# sourceMappingURL=6.e26bc6e5.chunk.js.map
