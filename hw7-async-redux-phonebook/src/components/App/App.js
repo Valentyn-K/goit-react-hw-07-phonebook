@@ -109,10 +109,11 @@ App.propTypes = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired || PropTypes.number.isRequired,
       id: PropTypes.string.isRequired,
     })
   ).isRequired,
-  filter: PropTypes.string.isRequired,
-  getContactsFromLocalStorage: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+  error: PropTypes.object,
+  fetchContacts: PropTypes.func.isRequired,
 };

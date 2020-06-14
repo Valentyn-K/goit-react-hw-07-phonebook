@@ -1,12 +1,12 @@
 import axios from "axios";
 import * as phonebookActions from "./phonebookActions";
+import { getContacts, postContact, delContact } from "../services/api";
 
 //-----operation for "fetching" contacts in App
 export const fetchContacts = () => (dispatch) => {
   dispatch(phonebookActions.fetchContactsRequest());
 
-  axios
-    .get("http://localhost:8000/contacts")
+  getContacts()
     .then((response) =>
       dispatch(phonebookActions.fetchContactsSuccess(response.data))
     )
@@ -17,8 +17,7 @@ export const fetchContacts = () => (dispatch) => {
 export const addContact = (contact) => (dispatch) => {
   dispatch(phonebookActions.addContactRequest());
 
-  axios
-    .post("http://localhost:8000/contacts", contact)
+  postContact(contact)
     .then((response) =>
       dispatch(phonebookActions.addContactSuccess(response.data))
     )
@@ -29,8 +28,7 @@ export const addContact = (contact) => (dispatch) => {
 export const deleteContact = (id) => (dispatch) => {
   dispatch(phonebookActions.deleteContactRequest());
 
-  axios
-    .delete(`http://localhost:8000/contacts/${id}`)
+  delContact(id)
     .then(() => dispatch(phonebookActions.deleteContactSuccess(id)))
     .catch((error) => {
       dispatch(phonebookActions.deleteContactError(error));

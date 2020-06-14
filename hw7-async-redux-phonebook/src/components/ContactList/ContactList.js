@@ -27,12 +27,11 @@ const ContactList = ({ filteredContacts }) => {
 export default ContactList;
 
 ContactList.propTypes = {
-  contacts: PropTypes.arrayOf(
+  filteredContacts: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      number: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired || PropTypes.number.isRequired,
       id: PropTypes.string.isRequired,
     })
   ).isRequired,
-  filter: PropTypes.string.isRequired,
 };

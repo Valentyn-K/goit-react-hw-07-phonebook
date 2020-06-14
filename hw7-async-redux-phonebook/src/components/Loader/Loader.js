@@ -5,4 +5,4 @@ const LoaderSpiner = () => (
   <Loader type="Audio" color="#00BFFF" height={80} width={80} />
 );
 
-export default Loader;
+export default LoaderSpiner;

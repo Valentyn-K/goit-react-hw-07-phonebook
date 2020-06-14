@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import styles from "./FormToAddContact.module.css";
 import { Button } from "@material-ui/core";
 import ClearIcon from "@material-ui/icons/Clear";
 import { connect } from "react-redux";
-import store from "../../redux/store";
+import { CSSTransition } from "react-transition-group";
 
 import Notification from "../Notification/Notification";
-import { CSSTransition } from "react-transition-group";
-import transitionToBottom from "../../styles/transitionToBottom.module.css";
 import { addContact } from "../../redux/phonebookOperations";
+import store from "../../redux/store";
+import styles from "./FormToAddContact.module.css";
+import transitionToBottom from "../../styles/transitionToBottom.module.css";
 
 const FormToAddContact = ({ onCloseForm, dispatch }) => {
   const [isNameNotifShow, setNameNotifShow] = useState(false);
